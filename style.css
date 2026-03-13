@@ -1,6 +1,5 @@
-/* ОБЩИЕ НАСТРОЙКИ */
 * {
-    box-sizing: border-box; /* Важно: чтобы padding не раздувал блоки */
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +10,11 @@ body {
     padding: 20px;
 }
 
-/* МОБИЛЬНЫЙ ВИД (одна колонка) */
+/* Контейнер для блоков */
+main {
+    letter-spacing: -4px; /* Убирает пробелы между inline-block элементами */
+}
+
 div {
     display: block;
     width: 90%;
@@ -19,6 +22,7 @@ div {
     background: #ffffff;
     padding: 15px;
     border-radius: 5px;
+    letter-spacing: normal; /* Возвращаем нормальный текст внутри блоков */
 }
 
 div img {
@@ -28,7 +32,7 @@ div img {
     margin: 0 auto 10px;
 }
 
-/* ЗАПРОС №1: ПЛАНШЕТ (от 772px - две колонки) */
+/* ПЛАНШЕТ (от 772px) */
 @media all and (min-width: 772px) {
     div {
         display: inline-block;
@@ -41,10 +45,10 @@ div img {
     }
 }
 
-/* ЗАПРОС №2: ШИРОКИЙ ЭКРАН (от 998px - три колонки) */
+/* ШИРОКИЙ ЭКРАН (от 998px) */
 @media all and (min-width: 998px) {
     div {
-        width: 31%; /* 31 * 3 = 93%, остается 7% на отступы и пробелы */
-        margin: 0.5%;
+        width: 31%; /* Теперь три блока точно влезут! */
+        margin: 1%;
     }
 }
