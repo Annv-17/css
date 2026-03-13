@@ -1,70 +1,15 @@
-/* --- БАЗОВЫЕ СТИЛИ (Мобильный вид: до 771px) --- */
-body {
-    background-color: #dedede;
-    margin: 0;
-    padding: 20px;
-    text-align: center; /* Центрируем заголовки и текст */
-}
+/* База для мобильных */
+body { background-color: #dedede; text-align: center; font-family: Arial; padding: 20px; }
+div { display: block; width: 90%; margin: 15px auto; background: white; padding: 15px; border-radius: 8px; }
+div img { width: 150px; height: 150px; display: block; margin: 0 auto 10px; }
 
-h1 {
-    font-family: Arial, sans-serif;
-    font-size: 32px;
-}
-
-p {
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
-
-/* Стили для контейнеров с цветами */
-div {
-    display: block;        /* На мобильных блоки идут друг под другом */
-    width: 90%;            /* Занимают почти всю ширину */
-    margin: 20px auto;     /* Центрируем блоки и добавляем отступы сверху/снизу */
-    padding: 10px;
-    border: 1px solid #ccc; /* Легкая рамка для наглядности (по желанию) */
-    background: #fff;       /* Белый фон для карточек */
-}
-
-/* Стили для изображений внутри блоков */
-div img {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto 10px;   /* Центрируем картинку и даем отступ до текста */
-}
-
-.label {
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Ссылка в футере */
-footer a {
-    display: inline-block;
-    margin-top: 30px;
-    color: #000;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-}
-
-/* --- ЗАПРОС №1: Планшетный вид (от 772px) --- */
+/* Планшет (2 колонки) */
 @media all and (min-width: 772px) {
-    div {
-        display: inline-block; /* Теперь блоки встают в ряд */
-        width: 44vw;           /* 45% ширины (чуть меньше для запаса) */
-        vertical-align: top;   /* Выравниваем по верхнему краю */
-        margin: 1%;            /* Отступы между блоками */
-    }
-
-    img {
-        max-height: 30vh;      /* Ограничение высоты по заданию */
-    }
+    div { display: inline-block; width: 44vw; vertical-align: top; margin: 1%; }
+    img { max-height: 30vh; }
 }
 
-/* --- ЗАПРОС №2: Широкоэкранный вид (от 998px) --- */
+/* Десктоп (3 колонки) */
 @media all and (min-width: 998px) {
-    div {
-        width: 30vw;           /* Теперь 3 блока в одном ряду */
-    }
+    div { width: 30vw; }
 }
