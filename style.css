@@ -1,15 +1,50 @@
-/* База для мобильных */
-body { background-color: #dedede; text-align: center; font-family: Arial; padding: 20px; }
-div { display: block; width: 90%; margin: 15px auto; background: white; padding: 15px; border-radius: 8px; }
-div img { width: 150px; height: 150px; display: block; margin: 0 auto 10px; }
-
-/* Планшет (2 колонки) */
-@media all and (min-width: 772px) {
-    div { display: inline-block; width: 44vw; vertical-align: top; margin: 1%; }
-    img { max-height: 30vh; }
+/* ОБЩИЕ НАСТРОЙКИ */
+* {
+    box-sizing: border-box; /* Важно: чтобы padding не раздувал блоки */
 }
 
-/* Десктоп (3 колонки) */
+body {
+    background-color: #dedede;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* МОБИЛЬНЫЙ ВИД (одна колонка) */
+div {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+div img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* ЗАПРОС №1: ПЛАНШЕТ (от 772px - две колонки) */
+@media all and (min-width: 772px) {
+    div {
+        display: inline-block;
+        width: 45%; 
+        margin: 1%;
+        vertical-align: top;
+    }
+    img {
+        max-height: 30vh;
+    }
+}
+
+/* ЗАПРОС №2: ШИРОКИЙ ЭКРАН (от 998px - три колонки) */
 @media all and (min-width: 998px) {
-    div { width: 30vw; }
+    div {
+        width: 31%; /* 31 * 3 = 93%, остается 7% на отступы и пробелы */
+        margin: 0.5%;
+    }
 }
